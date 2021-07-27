@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import axios from "../../utils/request";
 export default function Home() {
   const [count, setCount] = useState(0);
 
@@ -9,6 +9,16 @@ export default function Home() {
     document.title = `You clicked ${count} times`;
   });
 
+  const setUserName = () => {
+    console.log(123);
+    axios({
+      url: 'http://127.0.0.1:3001/setUserInfo',
+      method: 'get'
+    }).then(res => {
+      console.log(res);
+    });
+  };
+
   return (
     <div>
       12312313
@@ -16,6 +26,7 @@ export default function Home() {
       <button onClick={() => setCount(count + 1)}>
         Click me
       </button>
+      <button onClick={setUserName}>点我设置信息</button>
     </div>
   );
 }
