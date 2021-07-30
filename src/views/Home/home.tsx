@@ -6,11 +6,9 @@ export default function Home() {
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
     // Update the document title using the browser API
-    document.title = `You clicked ${count} times`;
   });
 
   const setUserName = () => {
-    console.log(123);
     axios({
       url: 'http://127.0.0.1:3001/setUserInfo',
       method: 'get'

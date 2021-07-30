@@ -1,3 +1,7 @@
+.main-contain {
+  width: 88%;
+  margin: 0 auto;
+}
 .ant-layout-has-sider {
   height: calc(100vh - 200px);
 }
@@ -6,4 +10,5 @@
 }
 .ant-layout-content {
   display: inline-flex;
+  width: calc(100% - 200px);
 }

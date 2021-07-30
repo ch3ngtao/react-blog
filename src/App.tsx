@@ -11,14 +11,14 @@ function App() {
       <Header>
         <HeaderCom></HeaderCom>
       </Header>
-      <Layout>
-        <Sider className="left-slide">Sider</Sider>
+      <Layout className="main-contain">
         <Content>
           <Router>
             <Redirect from="/" to="/home" />
             <Route path="/home" component={Home}></Route>
           </Router>
         </Content>
+        <Sider>Sider</Sider>
       </Layout>
       <Footer>Footer</Footer>
     </Layout>
